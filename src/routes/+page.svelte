@@ -1,5 +1,5 @@
 <script>
-import Modal from "../lib/sidebar/modal/Modal.svelte";
+import Modal from "../lib/modal/Modal.svelte";
 
 </script>
 

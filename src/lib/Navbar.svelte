@@ -1,5 +1,5 @@
 <script>
-    import Sidebar from './sidebar/Sidebar.svelte'
+    import Header from './header/Header.svelte';
     import logo from '../lib/images/svelte-logo.svg'
 </script>
 
@@ -19,6 +19,6 @@
       <a href="/contact">Contact us</a>
     </div>
     <div class='flex justify-end md:hidden'>
-    <Sidebar />
+    <Header />
   </div>
   </nav>

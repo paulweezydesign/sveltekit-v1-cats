@@ -1,5 +1,5 @@
 <script>
-	import { clickOutside } from "../../click_outside.js";
+	import { clickOutside } from "../click_outside.js";
 
 	let showModal = false;
 </script>

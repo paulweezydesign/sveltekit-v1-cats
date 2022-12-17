@@ -4,6 +4,6 @@
 </svelte:head>
 
 <div class="text-column">
-	<h1>About this app</h1>
+	<h1 class="text-7xl font-black">About this app</h1>
 
 </div>
