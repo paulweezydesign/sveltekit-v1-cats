@@ -1,9 +1,10 @@
 <script>
+	import { theme } from './../../stores/theme.ts';
     import {fly, fade} from 'svelte/transition'
-  
+  import MoonSun from '../MoonSun.svelte';
     import AnimatedHamburger from '$lib/AnimatedHamburger.svelte'
     import logo from '$lib/images/svelte-logo.svg'
-  
+    import Button from '../Button.svelte';
     export let open = false
     export let onClick = () => {
       open = !open
@@ -17,21 +18,35 @@
       {href: '/contact', name: 'Contact'},
     ]
   </script>
- 
+  
   <header class="text-primary">
-    <div class="flex justify-between">
-      <div class="logo">
-        <a href="https://kit.svelte.dev">
-          <img src={logo} alt="SvelteKit" />
+    <div class="grid grid-cols-2 md:grid-cols-4 items-center px-[7%] text-xl py-4 ">
+      <div class="logo flex flex-row">
+        <a href="/">
+          <img src={logo} alt="SvelteKit" /> 
+          <h1 class="hidden md:flex sm:text-2xl  font-black">SvelteKite App</h1>
         </a>
       </div>
+      <div class="hidden md:flex md:col-span-2 md:justify-evenly">
+        <a href="/about">About</a>
+        <a href="/kittens">Kittens</a>
+        <a href="/resources">Resources</a>
+      </div>
+      <div class="hidden md:flex md:justify-end">
+        <Button>
+        Toggle
+        </Button>
+        <a class="btn bg-purple-700 rounded " href="/contact">Contact us</a>
+      </div>
+      <div class="flex justify-end md:hidden">
       <AnimatedHamburger {open} {onClick} />
+    </div>
     </div>
   
     {#if open}
-    
+
       <nav
-        class="absolute z-50 grid  w-full grid-cols-1   shadow-lg rouneded-md  place-items-center gap-2 bg-[#fff] pb-4"
+        class="absolute z-[1300] grid h-[400px] w-full grid-cols-1   shadow-lg rouneded-md place-items-center gap-2 bg-[#fff] pb-4"
         transition:fly={{y: -200, duration: 400}}
       >
         {#each links as { href, name }}
@@ -42,6 +57,15 @@
   </header>
   
   <style>
+    			:global(body) {
+		background-color: #fff;
+		color: #282828;
+		transition: background-color 0.4s
+	}
+	:global(body.dark-mode) {
+		background-color: #282828;
+		color: #fff;
+	}
     header {
       position: relative;
       font-size: 2rem;

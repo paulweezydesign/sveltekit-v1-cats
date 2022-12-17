@@ -5,7 +5,7 @@
 </script>
 
 <button on:click={() => (showModal = true)}>Show Modal</button>
-{#if showModal}
+{#if showModal}jjhj ;lkajlkajsdf
 	<div class="box" use:clickOutside on:outclick={() => (showModal = false)}>
 		<div class="flex justify-end">
 		<button class="text-3xl" on:click={() => (showModal = false)}>X</button>
@@ -31,4 +31,4 @@
 		text-align: center;
 		font-weight: bold;
 	}
-</style>
+</                                                                                                                                               MMMM,,,,,,,,,                                style>

@@ -1,13 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		%sveltekit.head%
+		<style>
+				:global(body) {
+		background-color: #fff;
+		color: #282828;
+		transition: background-color 0.4s
+	}
+	:global(body.dark-mode) {
+		background-color: #282828;
+		color: #fff;
+	}
+		</style>
 	</head>
-	<body data-sveltekit-prefetch>
+	<body data-sveltekit-prefetch class="">
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
